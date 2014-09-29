@@ -1,0 +1,249 @@
+@CHARSET "UTF-8";
+
+/* This document was produced only for sample purposes during tutoring sessions 
+and should not be used as a final work.
+Code below produced by: Shawn Solomon in September 2014 */
+
+@import url('http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
+@import url(http://fonts.googleapis.com/css?family=Abel|Open+Sans);
+
+* {
+	margin:0;
+	padding:0;
+	position:relative;
+	font-family:'Arial', 'Verdana', sans-serif;
+}
+
+body {
+	color:#000000;
+	background:url('../imgs/bkg.jpg') left bottom fixed no-repeat;
+	background-size:cover;
+}
+
+h1, h2, h3, h4 ,h5, h6 {
+	font-family:'Abel', sans-serif;
+    text-shadow: 2px 2px 3px #ccc;
+} 
+
+a {
+	text-decoration:none;
+	font-family:'Open Sans', sans-serif;
+}
+
+p {
+	margin:15px;
+	font-family:'Open Sans', sans-serif;
+}
+
+#header{
+	overflow:hidden;
+	width:100%;
+	height:80px;
+	/*background:rgba(255,255,255,0.75);
+	border-bottom: 2px solid #000;*/
+	position:fixed;
+	z-index:2;
+}
+
+#footer {
+	overflow:hidden;
+	width:100%;
+	background:rgba(255,255,255,0.5);
+	padding:10px 0;
+	min-height:25px;
+	border-bottom:2px solid #59779c;	
+}
+
+#header a {
+	color:#59779c;
+	font-weight:bold;
+	text-decoration:none;
+	font-family:'Abel', sans-serif;
+	text-shadow: 2px 2px 3px #ccc;
+}
+
+#header nav  li {
+	display:inline-block;
+	float:left;
+	list-style:none;
+	text-align:center;
+	text-transform:uppercase;
+	opacity:0.8;
+	background:rgba(250,250,250,0.99);
+	border: 1px solid #000;
+	border-top:none;
+	border-radius:0 0 20% 20%;
+	box-shadow: 5px 5px 10px;
+}
+
+#header nav li a {
+	font-size:22px;
+	display:inline-block;
+	padding:10px 30px;
+	color:rgba(0,0,0,0.75);
+}
+
+
+#header nav li.active {
+	background:rgba(200,200,250,0.99);
+	padding:5px 0;
+}
+#header nav li:first-child {
+	border-left:1px solid #000;
+	margin-left:30px;
+}
+#header nav li:first-child a {
+	padding:8px 15px;
+	font-size:26px;
+	color:rgba(0,0,0,0.75);
+}
+
+#header nav li:last-child {
+	border-right: 1px solid #000;
+}
+
+#header nav li:hover {
+	background:rgba(200,200,250,0.99);
+	padding:5px 0;
+}
+
+#header nav  li.logo {
+	text-transform:none;
+	background:rgba(250,250,200,0.99);
+}
+
+#container {
+	overflow:hidden;
+	padding-top:300px;
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjIyJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjI3JSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 22%, rgba(255,255,255,1) 27%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(25%,rgba(255,255,255,1)), color-stop(22%,rgba(255,255,255,1)), color-stop(27%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 25%,rgba(255,255,255,1) 22%,rgba(255,255,255,1) 27%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 25%,rgba(255,255,255,1) 22%,rgba(255,255,255,1) 27%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 25%,rgba(255,255,255,1) 22%,rgba(255,255,255,1) 27%); /* IE10+ */
+background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 25%,rgba(255,255,255,1) 22%,rgba(255,255,255,1) 27%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-8 */
+}
+
+#col1 {
+	min-height:500px;
+	float:left;
+	width:65%;
+	padding:15px 2%;
+	border-right:1px dotted #000;
+}
+
+.contactList {
+	list-style-type:none;
+	margin:0 0 15px 0;
+	display:inline-block;
+}
+
+#col1 li {
+	margin-bottom:5px;
+	margin-left:60px;
+}
+
+#col2 {
+	min-height:500px;
+	float:left;
+	width:28%;
+	padding:15px 1%;
+}
+
+#footer {
+	padding:2%;
+	width:96%;
+	border-top:1px dotted #000;
+	border-bottom:none;
+}
+
+#footer nav {
+	float:left;
+	margin:0 20px;
+}
+
+#footer nav li {
+	list-style-type:square;
+	margin-left:15px;
+}
+
+#footer #copyright {
+	border-left:1px dotted #000;
+	float:left;
+	min-height:150px;
+	padding-left:20px;
+	text-align:center;
+	font-size:12px;
+}
+
+#footer #copyright p:first-child {
+	font-weight:bold;
+}
+
+.push-left {
+	float:left;
+}
+.push-right {
+	float:right;
+}
+
+img.preview {
+	width:50%;
+	height:30%;
+	margin:10px;
+}
+
+/* contact form and validation styling */
+
+form[name=contact] fieldset {
+	border:none;
+	margin:5px;
+} form[name=contact] legend {
+	font-size:large;
+	font-weight:bold;
+	margin:5px 0;
+} form[name=contact] input, form[name=contact] textarea {
+	padding:3px;
+	width:100%;
+	margin-bottom:10px;
+} form[name=contact] input[type=submit] {
+	margin:0 5px;
+} form[name=contact] label {
+	font-weight:bold;
+}
+
+#message-error,#name-error,#email-error {
+	color:#ff0000;
+	font-weight:bold;
+	position:relative;
+	top:-10px;
+}
+#message-error:before,#name-error:before,#email-error:before {
+	color:#ff0000;
+	font-weight:bold;
+	content:"Error: ";
+}
+
+// font-awesome overrides
+a.fa-twitter {
+	color:#1dcaff;
+}
+
+a.fa-facebook {
+	color:#3b5998;
+}
+
+a.fa-yelp {
+	color:#cb2027;
+}
+
+a.fa {
+	text-decoration:none;
+	margin:10px;
+	clear:both;
+	float:left;
+}
+
+/* Copyright Shawn Solomon 2014 -- Code provided above for sample purposes only. */
